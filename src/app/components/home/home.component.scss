@@ -1,0 +1,136 @@
+@import 'src/sass/variables';
+@import 'src/sass/mixins';
+@import 'src/sass/grid';
+@import 'src/sass/theme';
+
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+.card {
+  width: 320px;
+  height: 400px;
+  margin-top: 24px;
+  &:hover{
+    background-color: mat-color($primary);
+    color: white;
+    a{
+      color: #fff;
+    }
+  }
+}
+
+
+
+
+.pages-stack {
+  z-index: 100;
+  pointer-events: none;
+  -webkit-perspective: 1200px;
+  perspective: 1200px;
+  -webkit-perspective-origin: 50% -50%;
+  perspective-origin: 50% -50%;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+
+
+.simplebar-scroll-content {
+  overflow-x: hidden!important;
+  overflow-y: scroll;
+  min-width: 100%!important;
+  max-height: inherit!important;
+  -webkit-box-sizing: content-box!important;
+  box-sizing: content-box!important;
+}
+
+.simplebar-content {
+  overflow-y: hidden!important;
+  overflow-x: scroll;
+  -webkit-box-sizing: border-box!important;
+  box-sizing: border-box!important;
+  min-height: 100%!important;
+}
+
+.page.section-home #particles-js {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.page {
+  position: relative;
+  z-index: 5;
+  overflow: hidden;
+  overflow-y: hidden;
+  width: 100%;
+  height: 100vh;
+  pointer-events: auto;
+  background: #2a2b30;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  padding: 24px;
+}
+.page.section-home .banner-text {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+
+
+
+  .page.section-home .banner-text {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%); }
+    .page.section-home .banner-text .profile-img {
+      display: inline-block;
+      margin-bottom: 30px; }
+      .page.section-home .banner-text .profile-img img {
+        width: 150px;
+        height: 150px;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        border: 3.5px solid #4f90cd;
+      }
+    .page.section-home .banner-text .animate-title {
+      margin: auto;
+      font-size: 62px;
+      text-transform: uppercase;
+      color: #fff;
+      font-weight: 700;
+      letter-spacing: 2px;
+      line-height: 1em; }
+    .page.section-home .banner-text h4 {
+      font-size: 32px;
+      letter-spacing: 1px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      font-family: "Open Sans", sans-serif; }
+
+.page.section-home #video-container {
+  position: absolute !important;
+  height: 100%;
+  width: 100%;
+  z-index: -1; }
+
+
+
+.page.section-home .banner-slider {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1; }

@@ -1,0 +1,10 @@
+@import 'src/sass/variables';
+@import 'src/sass/mixins';
+@import 'src/sass/grid';
+svg{font-weight:bold;max-width:600px;height:auto;}
+.loading{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
