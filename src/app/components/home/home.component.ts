@@ -15,6 +15,8 @@ export class HomeComponent implements OnInit {
   ) {}
   pokemonList: any[]=[];
   nextUrl
+  loading=true;
+  errorObj
   ngOnInit() {
     this.fetchData()
   }
@@ -29,7 +31,9 @@ export class HomeComponent implements OnInit {
       if(!( (event.target.offsetHeight + event.target.scrollTop >= event.target.scrollHeight - 10)))
         return
     }
-      let data= await this.http.get({ url: environment.serviceUrl + 'pokemon' , params}) as {results:any[], previous: string | null, next: string | null, count: number};
+   this.loading=true;
+   try {
+        let data= await this.http.get({ url: environment.serviceUrl + 'pokemon' , params}) as {results:any[], previous: string | null, next: string | null, count: number};
       if(data.next){
         this.nextUrl= data.next;
       }
@@ -38,6 +42,12 @@ export class HomeComponent implements OnInit {
       id: parseInt(e.url.split('/pokemon/')[1],10)
     }
    }));
+   } catch (error) {
+     this.errorObj=error
+   }finally{
+   this.loading=false;
+
+   }
 
   }
 
