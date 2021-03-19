@@ -104,7 +104,7 @@ export class HomeComponent implements OnInit {
     this.router.navigate([], {
       queryParams: {
         [paramName]:
-          this.currentFilterParam[paramName] === paramValue ? null : paramValue,
+          this.currentFilterParam[paramName] == paramValue ? null : paramValue,
       },
       queryParamsHandling: 'merge',
     });
