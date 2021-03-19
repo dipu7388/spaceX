@@ -1,0 +1,101 @@
+{
+  "configVersion": 1,
+  "timestamp": 1616184108411,
+  "index": "/spaceX/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/spaceX/favicon.ico",
+        "/spaceX/index.html",
+        "/spaceX/main.5e5279d1fc1f2e817776.js",
+        "/spaceX/manifest.webmanifest",
+        "/spaceX/polyfills.8c151b8375e767ff858f.js",
+        "/spaceX/runtime.0e49e2b53282f40c8925.js",
+        "/spaceX/styles.dd7efbf4f8da04ee6194.css",
+        "/spaceX/vendor.7652e499800a0c22684e.js"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/spaceX/assets/fonts/Roboto-Bold.ttf",
+        "/spaceX/assets/fonts/Roboto-Italic.ttf",
+        "/spaceX/assets/fonts/Roboto-Light.ttf",
+        "/spaceX/assets/fonts/Roboto-Medium.ttf",
+        "/spaceX/assets/fonts/Roboto-Regular.ttf",
+        "/spaceX/assets/icons/Icon-144.png",
+        "/spaceX/assets/icons/Icon-192.png",
+        "/spaceX/assets/icons/Icon-36.png",
+        "/spaceX/assets/icons/Icon-48.png",
+        "/spaceX/assets/icons/Icon-512.png",
+        "/spaceX/assets/icons/Icon-72.png",
+        "/spaceX/assets/icons/Icon-96.png",
+        "/spaceX/fontawesome-webfont.eot",
+        "/spaceX/fontawesome-webfont.svg",
+        "/spaceX/fontawesome-webfont.ttf",
+        "/spaceX/fontawesome-webfont.woff",
+        "/spaceX/fontawesome-webfont.woff2"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/spaceX/assets/fonts/Roboto-Bold.ttf": "47327df0f35e7cd7c8645874897a7449697544ae",
+    "/spaceX/assets/fonts/Roboto-Italic.ttf": "493e74f72fac5d61e8dfc9bb1ff0a278ee584750",
+    "/spaceX/assets/fonts/Roboto-Light.ttf": "e321c183e2b75ee19813892b7bac8d7c411cb88a",
+    "/spaceX/assets/fonts/Roboto-Medium.ttf": "6060ca726b9760b76f7c347dce9d2fa1fe42ec92",
+    "/spaceX/assets/fonts/Roboto-Regular.ttf": "824b5480c977a8166e177e5357d13164ccc45f47",
+    "/spaceX/assets/icons/Icon-144.png": "b7f209d67d5494a46d75ad95aa8acfc09301ba2a",
+    "/spaceX/assets/icons/Icon-192.png": "cd33653a82fa6d709740b88522019181b977ed3d",
+    "/spaceX/assets/icons/Icon-36.png": "3be2f0bba9e5376b7130519e391052105cecfc11",
+    "/spaceX/assets/icons/Icon-48.png": "2580f458a9d418e3ea80f173273585e4109376b5",
+    "/spaceX/assets/icons/Icon-512.png": "35726de1d02e7526ea1185bd9a659c75f3fb1c73",
+    "/spaceX/assets/icons/Icon-72.png": "a7800e3984d3dbb8e0d749027408d753ed13e309",
+    "/spaceX/assets/icons/Icon-96.png": "1a6bcc69de64cd0a0984c739c51bb96558a2e11a",
+    "/spaceX/favicon.ico": "fd243b0d4069c5bf86065722c08927826e45d96f",
+    "/spaceX/fontawesome-webfont.eot": "d980c2ce873dc43af460d4d572d441304499f400",
+    "/spaceX/fontawesome-webfont.svg": "98a8aa5cf7d62c2eff5f07ede8d844b874ef06ed",
+    "/spaceX/fontawesome-webfont.ttf": "13b1eab65a983c7a73bc7997c479d66943f7c6cb",
+    "/spaceX/fontawesome-webfont.woff": "28b782240b3e76db824e12c02754a9731a167527",
+    "/spaceX/fontawesome-webfont.woff2": "d6f48cba7d076fb6f2fd6ba993a75b9dc1ecbf0c",
+    "/spaceX/index.html": "c5cc5a6f097a0066e9e1ed33fd97eb2757ccb59c",
+    "/spaceX/main.5e5279d1fc1f2e817776.js": "af9c9c68188b58a2e5c4f0e8e6745c94cae4d1a3",
+    "/spaceX/manifest.webmanifest": "5f60c21a143000abb4c9d2c0fe03e805ab2395c9",
+    "/spaceX/polyfills.8c151b8375e767ff858f.js": "763cd3b34dfa4600ebb9d9588ec7116988e98920",
+    "/spaceX/runtime.0e49e2b53282f40c8925.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
+    "/spaceX/styles.dd7efbf4f8da04ee6194.css": "398a656785cbc278df2937f1f909627a187bf300",
+    "/spaceX/vendor.7652e499800a0c22684e.js": "bc2a02f6efab342010ef51dcd3fc5fbb3fc243c0"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}

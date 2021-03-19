@@ -1,0 +1,36 @@
+{
+  "name": "Dheerendra Kumar Singh",
+  "short_name": "Dheerendra",
+  "theme_color": "#1976d2",
+  "background_color": "#fafafa",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "assets/icons/Icon-72.png",
+      "sizes": "72x47",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icons/Icon-96.png",
+      "sizes": "96x63",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icons/Icon-144.png",
+      "sizes": "144x95",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icons/Icon-192.png",
+      "sizes": "192x127",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icons/Icon-512.png",
+      "sizes": "512x341",
+      "type": "image/png"
+    }
+  ]
+}
