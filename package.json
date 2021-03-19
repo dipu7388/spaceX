@@ -1,10 +1,10 @@
 {
-  "name": "pokemon",
+  "name": "spaceX",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod",
+    "build": "rm -rf docs/ && ng build --prod --base-href '/spaceX/'",
     "deploy": "http-server -p 8081 -c-1 docs/",
     "test": "ng test",
     "lint": "ng lint",

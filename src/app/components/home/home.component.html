@@ -1,24 +1,90 @@
-<!-- routerLink="/" routerLinkActive="active" -->
-<section
-  class="page"
-  fxLayout="row wrap "
-  fxLayoutAlign="space-around"
-  (scroll)="fetchMoreData(nextUrl, $event)"
->
-  <a
-    [routerLink]="['/detail', pokemon?.id]"
-    *ngFor="let pokemon of pokemonList"
-  >
-    <mat-card class="card" fxLayout="column" fxFlexOffset="24px">
-      <mat-card-content fxFlex fxLayoutAlign="center center">
-        <h1 style="text-align: center">Pokemon Name: {{ pokemon?.name }}</h1>
-      </mat-card-content>
-      <mat-card-actions fxFlex="40px">
-        <button mat-button>View</button>
-      </mat-card-actions>
-    </mat-card>
-  </a>
-</section>
+<div class="wrapper" (scroll)="fetchMoreData($event)">
+  <div class="left">
+    <h1 class="title">SpaceX Launch Program</h1>
+    <p class="heading">Filters</p>
+    <div *ngFor="let filter of filters">
+      <br />
+      <p class="fname">{{ filter?.name }}</p>
+      <hr />
+      <br />
+      <div>
+        <mat-chip-list [aria-label]="filter.name">
+          <mat-chip
+            *ngFor="let key of filter.values"
+            color="primary"
+            [selected]="
+              (currentParams | async)[filter.key] == key.value ? true : false
+            "
+          >
+            <a
+              (click)="applyFilter(filter.key, key.value)"
+              queryParamsHandling="merge"
+              style="color: black; cursor: pointer"
+            >
+              {{ key?.label }}
+            </a>
+          </mat-chip>
+        </mat-chip-list>
+      </div>
+    </div>
+  </div>
+  <div class="right">
+    <section
+      class="page"
+      fxLayout="row wrap "
+      fxLayoutAlign="space-around"
+      (scroll)="fetchMoreData($event)"
+    >
+      <a
+        [href]="mission?.links?.article_link"
+        *ngFor="let mission of missionList"
+        target="_blank"
+      >
+        <mat-card class="card" fxLayout="column" fxFlexOffset="24px">
+          <img
+            mat-card-image
+            [src]="mission?.links?.mission_patch"
+            [alt]="mission?.details"
+          />
+          <mat-card-content fxFlex fxLayoutAlign="start center">
+            <div>
+              <mat-card-title
+                >{{ mission?.mission_name }} #
+                {{ mission?.flight_number }}</mat-card-title
+              >
+              <ul>
+                <p class="heading">Mission Ids:</p>
+                <li *ngFor="let mid of mission?.mission_id">{{ mid }}</li>
+              </ul>
+              <p class="heading">
+                Launch Year :
+                <span class="heading-value"> {{ mission?.launch_year }}</span>
+              </p>
+              <p class="heading">
+                Successful Launch :
+                <span class="heading-value">{{ mission?.launch_success }}</span>
+              </p>
+              <p class="heading">
+                Successful Landing :
+                <span class="heading-value">{{
+                  mission?.launch_landing || false
+                }}</span>
+              </p>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </a>
+
+      <div
+        *ngIf="!missionList.length && !loading"
+        fxFlex
+        fxLayoutAlign="center center"
+      >
+        <h2 style="opacity: 0.7">No Data Available</h2>
+      </div>
+    </section>
+  </div>
+</div>
 
 <div class="loader" *ngIf="loading">
   <mat-spinner></mat-spinner>

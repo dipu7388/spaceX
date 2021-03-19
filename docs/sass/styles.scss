@@ -3,10 +3,6 @@
 @import 'src/sass/mixins';
 @import 'src/sass/grid';
 @import 'src/sass/theme';
-
-// @import 'src/sass/custom';
-// @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
-// @import '~bootstrap/dist/css/bootstrap.min.css';
 @include angular-material-theme($theme);
 
 $scrollColor:map-get($theme, primary);
@@ -26,12 +22,28 @@ $scrollColor:map-get($theme, primary);
 * {
   transition: all linear;
 }
-.invalid-feedback{
-  color: red;
-  font-size: resp-calc(6,6);
-  padding-left: 0.5em;
-  float: left;
+
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+  height: 100%;
+  overflow: hidden;
+  font-family: "Roboto Regular", "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  color: #e1e1e1;
+  background-color: $bg-body;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+html{
+  height: 100%;
+  width: 100%;
+}
+
+
 
 //tan colors
 
@@ -57,10 +69,6 @@ header .menu-button:before {
   border-color: $bg-secondary !important;
 }
 
-blockquote {
-  border-color: $bg-secondary !important;
-}
-
 .sub-heading h3:before {
   background: $bg-secondary !important;
 }
@@ -69,70 +77,12 @@ blockquote {
   color: $bg-secondary !important;
 }
 
-.section-about .about-info p strong {
-  color: $bg-secondary !important;
-}
 
-.section-about .about-info .about-list li .title:before {
-  background-color: $bg-secondary !important;
-}
 
-.section-about .services .service-item i {
-  color: $bg-secondary !important;
-}
 
-.section-about .testimonials .testimonial-item .description:before {
-  color: $bg-secondary !important;
-}
 
-.section-about .testimonials .testimonial-item .rating li {
-  color: $bg-secondary !important;
-}
 
-.section-blog .blog-item .post-content .cat {
-  color: $bg-secondary !important;
-}
 
-.section-contact .contact-detail .contact-info li .title:before {
-  background-color: $bg-secondary !important;
-}
-
-.section-contact .contact-detail .social-media h4:before {
-  background-color: $bg-secondary !important;
-}
-
-.page.section-home .banner-text .animate-title {
-  color: $bg-secondary !important;
-}
-
-.section-portfolio .portfolio-filter ul li.active {
-  background-color: $bg-secondary !important;
-}
-
-.section-portfolio .portfolio-items .item figure {
-  background: $bg-secondary !important;
-}
-
-.section-resume .experience, .section-resume .language, .section-resume .projects, .section-resume .education, .company {
-  border-color: $bg-secondary !important;
-}
-
-.section-resume .experience h5, .section-resume .language h5, .section-resume .projects h5, .section-resume .education h5 {
-  color: $bg-secondary !important ;
-  a{
-  color: $bg-secondary !important ;
-
-  }
-}
-
-.section-resume .experience .event:after, .section-resume .language .event:after, .section-resume .projects .event:after, .section-resume .education .event:after {
-  -webkit-box-shadow: 0 0 0 4px $bg-secondary !important;
-  box-shadow: 0 0 0 4px $bg-secondary !important;
-}
-
-.section-resume .skills .skill-item .progress .progress-bar:after {
-  border-color: $bg-secondary !important;
-}
 
 .section-resume .skills .skill-item .progress .progress-bar {
   background-color: $bg-secondary !important;
@@ -172,21 +122,6 @@ header .back-button:before {
   font-weight: 600;
 }
 
-body{
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  box-sizing: border-box;
-  height: 100%;
-  overflow: auto;
-  font-family: "Roboto Regular",  "Open Sans", sans-serif;
-  font-size: 16px;
-  line-height: 1.65;
-  color: #e1e1e1;
-  background-color: $bg-body;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 a {
   text-decoration: none;
   color: #e1e1e1;
@@ -263,11 +198,7 @@ html {
   height: 100%;
 }
 
-body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-  height: 100%;
-}
+
 
 .material-icons {
   font-family: 'Material Icons';
@@ -525,18 +456,7 @@ i, em {
 a:hover {
   text-decoration: none; }
 
-html,
-body {
-  overflow: hidden;
-  height: 100vh; }
 
-body {
-  font-family: "Open Sans", sans-serif;
-  font-size: 16px;
-  line-height: 1.65;
-  color: #e1e1e1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Source Serif Pro", serif;
@@ -551,7 +471,8 @@ p {
 
 img {
   width: 100%;
-  height: auto; }
+  height: auto;
+}
 
 a,
 a:hover,
@@ -999,43 +920,10 @@ a:hover {
   .main-btn:hover {
     color: $bg-primary !important;  }
 
-blockquote {
-  font-size: 18px;
-  border-left: 4px solid #e1e1e1;
-  font-style: italic;
-  padding-left: 20px;
-  margin: 40px 0;
-  font-weight: 500; }
 
-/*Forms*/
-form {
-  -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  padding: 38px; }
-  form .input-field {
-    width: 100%;
-    background-color: transparent;
-    border: none;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-    color: #e1e1e1;
-    resize: none; }
-    form .input-field.cf-error {
-      border-color: #aa0000; }
-    form .input-field:focus {
-      border-color: #fff; }
-    form .input-field.input--filled {
-      border-color: #fff; }
 
-#contact-form .alert-container {
-  text-align: center; }
 
-#contact-form .alert-container .alert {
-  -webkit-border-radius: 0;
-  border-radius: 0; }
+
 
 
 
@@ -1074,29 +962,11 @@ form {
 
 
 
-
-
-/*======== 11. Mobile Responsive Css ========*/
-@media screen and (max-width: 991px) {
-  .section-home .banner-text .text-slideshow .animate-title {
-    font-size: 58px !important; }
-  .section-about .about-img {
-    margin-bottom: 40px !important;
-    display: grid;
-    place-content: center;
-  }
-  .section-contact .contact-detail {
-    margin-bottom: 40px !important; } }
-
 @media screen and (max-width: 700px) {
   header .nav-menu .nav-menu--link {
     margin-left: 8px !important;
     margin-right: 8px !important; }
-
-  .section-home .banner-text h4 {
-    font-size: 30px !important; }
-  .section-home .banner-text .text-slideshow .animate-title {
-    font-size: 50px !important; } }
+ }
 
 @media screen and (max-width: 620px) {
   header .nav-menu .nav-menu--link {
@@ -1111,32 +981,21 @@ form {
     font-weight: 700;
     font-size: 2.5em;
   }
-  .section-home .banner-text .text-slideshow .animate-title {
-    font-size: 46px !important; }
+
   .row{
     margin-left: 0px;
     margin-right: 0px;
   }
   }
 
-@media screen and (max-width: 550px) {
-  .section-home .banner-text h4 {
-    font-size: 24px !important; }
-  .section-home .banner-text .text-slideshow .animate-title {
-    font-size: 36px !important; }
-  .section-about .client-logo {
-    margin: 0 10px !important; } }
+
 
 @media screen and (max-width: 480px) {
   .page-heading h2:before {
     font-size: 52px !important; }
   .sub-heading h3:before, .sub-heading h3:after {
     width: 60px !important; }
-  .section-resume .education, .section-resume .experience, .section-resume .language, .section-resume .projects {
-    padding-left: 25px !important;
-    padding-right: 25px !important; }
-    .section-resume .education .event:after, .section-resume .experience .event:after, .section-resume .language .event:after, .section-resume .projects .event:after {
-      left: -32.85px !important; } }
+  }
 
 
 
@@ -1144,4 +1003,5 @@ form {
   header .nav-menu {
     display: block !important;
     min-height: 30vh !important;
-    overflow-y: scroll !important; } }
+    overflow-y: scroll !important; }
+  }

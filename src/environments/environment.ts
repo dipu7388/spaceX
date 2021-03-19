@@ -4,10 +4,9 @@
 
 export const environment = {
   production: false,
-  serviceUrl: 'https://pokeapi.co/api/v2/',
+  serviceUrl: 'https://api.spaceXdata.com/v3/launches',
   logLevel: 1,
 };
-
 
 /*
  * For easier debugging in development mode, you can import the following file
